@@ -40,6 +40,7 @@ Here are the pseudo-codes that show the repayment and penalty logic for the Micr
         └───────────┬──────────────┘
                     │
                     ▼
+   
          ┌────────────────────────┐
          │ Input P, R, N          │
          │ P = Principal          │
@@ -48,6 +49,7 @@ Here are the pseudo-codes that show the repayment and penalty logic for the Micr
          └───────────┬────────────┘
                      │
                      ▼
+   
         ┌──────────────────────────┐
         │ Compute EMI using        │
         │ EMI = P*R*(1+R)^N        │
@@ -55,11 +57,13 @@ Here are the pseudo-codes that show the repayment and penalty logic for the Micr
         └───────────┬──────────────┘
                     │
                     ▼
+   
         ┌──────────────────────────┐
         │ Print EMI                │
         └───────────┬──────────────┘
                     │
                     ▼
+   
         ┌──────────────────────────┐
         │          End             │
         └──────────────────────────┘

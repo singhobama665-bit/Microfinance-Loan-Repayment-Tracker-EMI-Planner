@@ -74,6 +74,7 @@ Here are the pseudo-codes that show the repayment and penalty logic for the Micr
 
 2. Flowchart — Repayment Processing (Full / Partial / Extra Payment).
 
+
         ┌────────────────┬
         │    Start       │
         └───────┬────────┘
@@ -127,6 +128,7 @@ Here are the pseudo-codes that show the repayment and penalty logic for the Micr
 
 3. Flowchart — Penalty Calculation for Late Payment.
 
+
         ┌───────────────┐
         │    Start      │
         └──────┬────────┘
@@ -155,6 +157,7 @@ Here are the pseudo-codes that show the repayment and penalty logic for the Micr
    -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
    4. Flowchart — Delinquency Calculation (Portfolio Risk).
+      
 
         ┌───────────────┐
         │    Start      │

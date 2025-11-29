@@ -157,29 +157,29 @@ Here are the pseudo-codes that show the repayment and penalty logic for the Micr
 
    -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-   4. Flowchart — Delinquency Calculation (Portfolio Risk).
+   4. Flowchart — Delinquency Calculation.
       
 
-        ┌───────────────┐
-        │    Start      │
-        └───────────────┘
-                │
-                ▼
+           ┌───────────────┐
+           │    Start      │
+           └───────────────┘
+                  │
+                  ▼
       
-      ┌────────────────────┐
-      │ Input n borrowers  │
-      └────────┬───────────┘
-               │
-               ▼
+         ┌────────────────────┐
+         │ Input n borrowers  │
+         └────────┬───────────┘
+                  │
+                  ▼
       
-   ┌───────────────────────────────┐
-   │ Loop i = 1 to n               │
-   │  Input outstanding            │
-   │  Input overdue (1/0)          │
-   │  Add to total_outstanding     │
-   │  If overdue==1 count++        │
-   └────────────────┬──────────────┘
-                    ▼
+    ┌───────────────────────────────┐
+    │ Loop i = 1 to n               │
+    │  Input outstanding            │
+    │  Input overdue (1/0)          │
+    │  Add to total_outstanding     │
+    │  If overdue==1 count++        │
+    └────────────────┬──────────────┘
+                     ▼
    
        ┌──────────────────────────┐
        │ delinquency_rate =       │

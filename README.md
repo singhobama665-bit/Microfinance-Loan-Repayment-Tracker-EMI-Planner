@@ -80,44 +80,44 @@ Here are the pseudo-codes that show the repayment and penalty logic for the Micr
         └───────┬────────┘
                 ▼
    
-    ┌─────────────────────────┐
-    │ Input EMI, outstanding, │
-    │ amount_paid             │
-    └──────────┬──────────────┘
-               ▼
+        ┌─────────────────────────┐
+        │ Input EMI, outstanding, │
+        │ amount_paid             │
+        └──────────┬──────────────┘
+                   ▼
    
-    ┌──────────────────────────┐
-    │ Is amount_paid == EMI ?  │
-    └───────┬──────────────┬───┘
-            │ Yes          │ No
-            ▼              ▼
+        ┌──────────────────────────┐
+        │ Is amount_paid == EMI ?  │
+        └───────┬──────────────┬───┘
+                │ Yes          │ No
+                ▼              ▼
    
- ┌─────────────────┐    ┌─────────────────────────┐
- │ Full EMI paid   │    │ Is amount_paid > EMI ?  │
- │outstanding-=EMI │    └─────────┬───────────────┘
- └───────┬─────────┘              │ Yes
-         │                        ▼
-         |
-         │                  ┌──────────────────────────┐
-         │                  │ Extra amount + EMI       │
-         │                  │ outstanding-=amount_paid │
-         │                  └───────────┬──────────────┘
-         │                              │
-         │ No                           ▼
-         |
-         ▼                   ┌────────────────────────┐
-                             |                        |
- ┌────────────────────┐      │ Partial Payment        │
- │ amount_paid < EMI  │      │ remaining = EMI - paid │
- │ outstanding-=paid  │      │ Print remaining amount │
- └──────────┬─────────┘      └─────┬──────────────────┘
-            │                      │
-            ▼                      ▼
+        ┌─────────────────┐    ┌─────────────────────────┐
+        │ Full EMI paid   │    │ Is amount_paid > EMI ?  │
+        │outstanding-=EMI │    └─────────┬───────────────┘
+        └───────┬─────────┘              │ Yes
+                │                        ▼
+                |
+                │                  ┌──────────────────────────┐
+                │                  │ Extra amount + EMI       │
+                │                  │ outstanding-=amount_paid │
+                │                  └───────────┬──────────────┘
+                │                              │
+                │ No                           ▼
+                |
+                ▼                   ┌────────────────────────┐
+                                    |                        |
+        ┌────────────────────┐      │ Partial Payment        │
+        │ amount_paid < EMI  │      │ remaining = EMI - paid │
+        │ outstanding-=paid  │      │ Print remaining amount │
+        └──────────┬─────────┘      └─┬──────────────────────┘
+                   │                  |  
+                   ▼                  ▼
             
-      ┌──────────────────────────────┐
-      │ Print Updated Outstanding    │
-      └───────────┬──────────────────┘
-                  ▼
+        ┌──────────────────────────────┐
+        │ Print Updated Outstanding    │
+        └───────────┬──────────────────┘
+                    ▼
                   
         ┌──────────────────────────┐
         │           End            │

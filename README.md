@@ -78,38 +78,46 @@ Here are the pseudo-codes that show the repayment and penalty logic for the Micr
         │    Start       │
         └───────┬────────┘
                 ▼
+   
     ┌─────────────────────────┐
     │ Input EMI, outstanding, │
     │ amount_paid             │
     └──────────┬──────────────┘
                ▼
+   
     ┌──────────────────────────┐
     │ Is amount_paid == EMI ?  │
     └───────┬──────────────┬───┘
             │ Yes          │ No
             ▼              ▼
- ┌────────────────┐    ┌─────────────────────────┐
- │ Full EMI paid  │    │ Is amount_paid > EMI ?  │
- │ outstanding-=EMI│   └─────────┬───────────────┘
- └───────┬─────────┘             │ Yes
-         │                       ▼
+   
+ ┌─────────────────┐    ┌─────────────────────────┐
+ │ Full EMI paid   │    │ Is amount_paid > EMI ?  │
+ │outstanding-=EMI │    └─────────┬───────────────┘
+ └───────┬─────────┘              │ Yes
+         │                        ▼
+         |
          │                  ┌──────────────────────────┐
          │                  │ Extra amount + EMI       │
          │                  │ outstanding-=amount_paid │
          │                  └───────────┬──────────────┘
          │                              │
          │ No                           ▼
+         |
          ▼                   ┌────────────────────────┐
+                             |                        |
  ┌────────────────────┐      │ Partial Payment        │
  │ amount_paid < EMI  │      │ remaining = EMI - paid │
  │ outstanding-=paid  │      │ Print remaining amount │
  └──────────┬─────────┘      └─────┬──────────────────┘
             │                      │
             ▼                      ▼
+            
       ┌──────────────────────────────┐
       │ Print Updated Outstanding    │
       └───────────┬──────────────────┘
                   ▼
+                  
         ┌──────────────────────────┐
         │           End            │
         └──────────────────────────┘
@@ -123,19 +131,23 @@ Here are the pseudo-codes that show the repayment and penalty logic for the Micr
         │    Start      │
         └──────┬────────┘
                ▼
+   
      ┌──────────────────────────┐
      │ Input days_late          │
      │ Input penalty_rate/day   │
      └──────────┬───────────────┘
                 ▼
+   
       ┌─────────────────────────┐
       │ penalty = days * rate   │
       └──────────┬──────────────┘
                  ▼
+   
       ┌─────────────────────────┐
       │ Print penalty amount    │
       └──────────┬──────────────┘
                  ▼
+   
      ┌────────────────────────┐
      │          End           │
      └────────────────────────┘
@@ -149,11 +161,13 @@ Here are the pseudo-codes that show the repayment and penalty logic for the Micr
         └───────────────┘
                 │
                 ▼
+      
       ┌────────────────────┐
       │ Input n borrowers  │
       └────────┬───────────┘
                │
                ▼
+      
    ┌───────────────────────────────┐
    │ Loop i = 1 to n               │
    │  Input outstanding            │
@@ -162,15 +176,18 @@ Here are the pseudo-codes that show the repayment and penalty logic for the Micr
    │  If overdue==1 count++        │
    └────────────────┬──────────────┘
                     ▼
+   
        ┌──────────────────────────┐
        │ delinquency_rate =       │
        │ (count/n)*100            │
        └──────────┬───────────────┘
                   ▼
+   
        ┌──────────────────────────┐
        │ Print total + rate       │
        └──────────┬───────────────┘
                   ▼
+   
         ┌─────────────────────────┐
         │           End           │
         └─────────────────────────┘

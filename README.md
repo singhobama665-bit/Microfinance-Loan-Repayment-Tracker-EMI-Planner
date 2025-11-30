@@ -1,5 +1,7 @@
 # Microfinance-Loan-Repayment-Tracker-EMI-Planner.
 
+Developed by - Nivedita, Aditya Singh and Obama Singh. 
+
 Project 38 : Microfinance Loan Repayment Tracker & EMI Planner.
 
 Real-world context: Microfinance institutions track many small loans, repayment schedules, delinquencies, and interest accrual. 
